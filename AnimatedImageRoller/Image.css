@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background: #f4f6f7; */
+     /* background: linear-gradient(rgb(154, 202, 154),rgba(197, 1, 1, 0.5),rgb(149, 242, 249),rgb(156, 48, 156),rgba(27, 61, 61, 0.5),rgb(87, 34, 34),rgb(143, 93, 1)); */ */
+	background-position: cover;
+    background-image: url(Images/321.jpg);
+
+}
+.name{
+    margin-top: 80px;
+    text-align: center;
+    background: linear-gradient(180deg,#ff3434 0%,#fad91d 110%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    cursor: pointer;
+    font-size: 80px;
+    font-family: bday;
+}
+.wrapper{
+    position: relative;
+    width: 320px;
+    margin: 150px auto;
+    perspective: 1000px;
+    margin-bottom: 500px;    
+}
+.img-area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-300px);
+    animation: animate 25s steps(1000,end) infinite;
+
+}
+
+.single-img{ position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 10px;
+    left: 10px;
+
+}
+.single-img img{
+    width: 300px;
+    height: 200px;
+    border: 5px solid #fff;
+}
+.single-img.img-one{
+    transform: rotateY(0deg) translateZ(300px);
+}
+.single-img.img-two{
+    transform: rotateY(60deg) translateZ(300px);
+}
+.single-img.img-three{
+    transform: rotateY(120deg) translateZ(300px);
+}
+.single-img.img-four{
+    transform: rotateY(180deg) translateZ(300px);
+}
+.single-img.img-five{
+    transform: rotateY(240deg) translateZ(300px);
+}
+.single-img.img-six{
+    transform: rotateY(300deg) translateZ(300px);
+}
+.single-img.img-seven{
+    transform: rotateY(300deg) translateZ(300px);
+}
+.single-img.img-eight{
+    transform: rotateY(300deg) translateZ(300px);
+}
+img{
+    filter: grayscale(90%);
+    transition: 1s;
+    filter:grayscale()
+}
+img:hover{
+    transition: 1s;
+    filter: grayscale(0);
+}
+@keyframes animate{
+from{
+    transform: rotateY(-360deg);
+}
+to{
+    transform: rotateY(0deg);
+}
+}
+
+@font-face{
+    font-family: bday;
+    src:url(bday.ttf);
+}
